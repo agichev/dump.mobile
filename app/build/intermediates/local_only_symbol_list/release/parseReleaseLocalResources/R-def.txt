@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color bg
+color error
+color error_bg
+color ic_launcher_background
+color shimmer_base
+color shimmer_highlight
+color surface
+color surface_elevated
+color surface_hover
+color text_main
+color text_muted
+drawable ic_error
+drawable ic_vpn_block
+drawable shimmer_circle
+drawable shimmer_gradient
+drawable shimmer_layer_1
+drawable shimmer_rounded
+id errorMsg
+id errorRetryBtn
+id errorScreen
+id loadingLogo
+id retryBtn
+id skeletonOverlay
+id vpnBlock
+id vpnDesc
+id vpnIcon
+id webView
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+string app_name
+style AppTheme

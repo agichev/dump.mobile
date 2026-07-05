@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/home/danil/Документы/GitHub/dumpmobile/app"
+    name=":app"
+    type="APP"
+    maven="Dump:app:unspecified"
+    agpVersion="8.7.2"
+    buildFolder="build"
+    bootClassPath="/tmp/android-sdk/platforms/android-34/android.jar:/tmp/android-sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

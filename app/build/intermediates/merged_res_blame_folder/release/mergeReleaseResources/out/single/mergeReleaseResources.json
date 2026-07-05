@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/layout_activity_main.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/drawable_ic_error.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/drawable/ic_error.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/drawable_shimmer_layer_1.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/drawable/shimmer_layer_1.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/drawable_ic_vpn_block.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/drawable/ic_vpn_block.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.dump.app-release-33:/layout_activity_main.xml.flat",
+        "source": "com.dump.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/drawable_shimmer_gradient.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/drawable/shimmer_gradient.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/drawable_shimmer_circle.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/drawable/shimmer_circle.xml"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-release-33:/drawable_shimmer_rounded.xml.flat",
+        "source": "/home/danil/.gradle/daemon/8.11.1/com.dump.app-main-34:/drawable/shimmer_rounded.xml"
+    }
+]

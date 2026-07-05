@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#000000</color>
+    <color name="error">#ff2a5f</color>
+    <color name="error_bg">#26ff2a5f</color>
+    <color name="ic_launcher_background">#000000</color>
+    <color name="shimmer_base">#111111</color>
+    <color name="shimmer_highlight">#1a1a1a</color>
+    <color name="surface">#0a0a0a</color>
+    <color name="surface_elevated">#111111</color>
+    <color name="surface_hover">#1a1a1a</color>
+    <color name="text_main">#ffffff</color>
+    <color name="text_muted">#808080</color>
+    <string name="app_name">Dump</string>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="colorPrimary">@color/surface</item>
+        <item name="colorPrimaryDark">@color/bg</item>
+        <item name="colorAccent">@color/text_main</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#000000</color>
+    <color name="surface">#0a0a0a</color>
+    <color name="surface_elevated">#111111</color>
+    <color name="surface_hover">#1a1a1a</color>
+    <color name="text_main">#ffffff</color>
+    <color name="text_muted">#808080</color>
+    <color name="error">#ff2a5f</color>
+    <color name="error_bg">#26ff2a5f</color>
+    <color name="shimmer_highlight">#1a1a1a</color>
+    <color name="shimmer_base">#111111</color>
+    <color name="ic_launcher_background">#000000</color>
+</resources>
