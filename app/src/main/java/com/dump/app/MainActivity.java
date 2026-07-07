@@ -300,7 +300,7 @@ public class MainActivity extends AppCompatActivity {
             if (destroyed) return;
             new AlertDialog.Builder(this)
                 .setTitle("Предупреждение")
-                .setMessage("На вашем устройстве отсутствуют сервисы Google Play.\nРабота некоторых функций приложения может быть нестабильной.")
+                .setMessage("На вашем устройстве отсутствуют сервисы Google Play.\n\nPush-уведомления работать не будут. Остальные функции приложения могут быть нестабильны.")
                 .setPositiveButton("Продолжить", (d, w) -> webView.loadUrl(DUMP_URL))
                 .setNegativeButton("Закрыть", (d, w) -> finish())
                 .setCancelable(false)
