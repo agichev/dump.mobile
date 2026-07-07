@@ -14,7 +14,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.webkit.CookieManager;
-import android.webkit.JavascriptInterface;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -23,6 +22,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -37,7 +38,7 @@ import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
-    private WebView webView;
+    WebView webView;
     private View skeletonOverlay;
     private View loadingLogo;
     private FrameLayout vpnBlock;
@@ -60,13 +61,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int MAX_RETRIES = 2;
     private int retryCount = 0;
 
-    public class AndroidBridge {
-        @JavascriptInterface
-        public String getFcmToken() {
-            return DumpFirebaseMessagingService.getSavedToken(MainActivity.this);
-        }
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,10 +77,34 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.errorRetryBtn).setOnClickListener(v -> restart());
 
         setupWebView();
+        DumpFirebaseMessagingService.setActiveActivity(this);
+        requestAndInjectToken();
         handleIntent(getIntent());
         requestNotifPermission();
         startSkeleton();
         checkIp();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        DumpFirebaseMessagingService.setActiveActivity(this);
+        requestAndInjectToken();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        CookieManager.getInstance().flush();
+    }
+
+    @Override
+    protected void onDestroy() {
+        destroyed = true;
+        DumpFirebaseMessagingService.setActiveActivity(null);
+        handler.removeCallbacksAndMessages(null);
+        executor.shutdownNow();
+        super.onDestroy();
     }
 
     @Override
@@ -114,9 +132,10 @@ public class MainActivity extends AppCompatActivity {
         switch (pendingNavType) {
             case "comment":
                 if (pendingNavPostSlug != null && !pendingNavPostSlug.isEmpty()) {
-                    js = "navigate('/post/" + jsEscape(pendingNavPostSlug) + "');";
+                    js = "navigate('/post/" + jsEscape(pendingNavPostSlug) + "');setTimeout(function(){openComments(" + 
+                        (pendingNavPostId != null ? pendingNavPostId : "null") + ",'" + jsEscape(pendingNavPostSlug) + "')},300);";
                 } else {
-                    js = null;
+                    js = "navigate('/notifications');";
                 }
                 break;
             case "like":
@@ -124,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 if (pendingNavFromUserId != null && !pendingNavFromUserId.isEmpty()) {
                     js = "navigate('/profile/" + jsEscape(pendingNavFromUserId) + "');";
                 } else {
-                    js = null;
+                    js = "navigate('/notifications');";
                 }
                 break;
             case "new_post":
@@ -133,19 +152,25 @@ public class MainActivity extends AppCompatActivity {
                 } else if (pendingNavFromUserId != null && !pendingNavFromUserId.isEmpty()) {
                     js = "navigate('/profile/" + jsEscape(pendingNavFromUserId) + "');";
                 } else {
-                    js = null;
+                    js = "navigate('/notifications');";
                 }
                 break;
             case "login":
                 js = "navigate('/profile');setTimeout(function(){openSettings();setTimeout(function(){switchSettingsTab('sessions')},100)},300);";
                 break;
+            case "notifications":
+                js = "navigate('/notifications');";
+                break;
             default:
-                js = null;
+                js = "navigate('/notifications');";
         }
-        if (js != null) {
-            webView.evaluateJavascript(js, null);
+        if (webView != null) {
+            webView.loadUrl("javascript:" + js);
         }
         pendingNavType = null;
+        pendingNavFromUserId = null;
+        pendingNavPostId = null;
+        pendingNavPostSlug = null;
     }
 
     private String jsEscape(String s) {
@@ -160,6 +185,20 @@ public class MainActivity extends AppCompatActivity {
                         new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1002);
             }
         }
+    }
+
+    private void requestAndInjectToken() {
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+            if (!task.isSuccessful() || task.getResult() == null) return;
+            String t = task.getResult();
+            DumpFirebaseMessagingService.saveToken(this, t);
+            DumpFirebaseMessagingService.registerOnServerRetry(t);
+            if (webView != null) {
+                String escaped = t.replace("\\", "\\\\").replace("'", "\\'");
+                webView.evaluateJavascript(
+                    "window.__fcmToken='" + escaped + "';if(typeof fcmRetry==='function')fcmRetry();", null);
+            }
+        });
     }
 
     private void restart() {
@@ -230,8 +269,6 @@ public class MainActivity extends AppCompatActivity {
         s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         s.setUserAgentString(WebSettings.getDefaultUserAgent(this) + " DumpApp/1.0");
 
-        webView.addJavascriptInterface(new AndroidBridge(), "AndroidBridge");
-
         CookieManager cm = CookieManager.getInstance();
         cm.setAcceptCookie(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -260,6 +297,14 @@ public class MainActivity extends AppCompatActivity {
                     pageLoaded = true;
                     hideSkeleton();
                 }
+                String t = DumpFirebaseMessagingService.getSavedToken(MainActivity.this);
+                if (t != null) {
+                    String escaped = t.replace("\\", "\\\\").replace("'", "\\'");
+                    view.evaluateJavascript(
+                        "window.__fcmToken='" + escaped + "';if(typeof fcmRetry==='function')fcmRetry();", null);
+                    DumpFirebaseMessagingService.registerOnServerRetry(t);
+                }
+                requestAndInjectToken();
                 view.evaluateJavascript(
                     "(function(){var m=document.querySelector('meta[name=viewport]');if(m){var c=m.content;if(c.indexOf('width=390')>=0){m.content=c.replace('width=390','width=device-width')}}if(typeof CSS!=='undefined'&&CSS.supports&&!CSS.supports('height','1dvh')){var s=document.createElement('style');s.textContent='body,.feed-container,.post-card{height:100vh!important}.post-wrapper{height:82vh!important}.profile-container{height:100vh!important}.modal-overlay{height:100vh!important}.modal-content{max-height:90vh!important}';document.head.appendChild(s)}document.body.style.overflow='hidden';requestAnimationFrame(function(){document.body.style.overflow='';window.dispatchEvent(new Event('resize'))})})();",
                     null
@@ -374,19 +419,5 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        CookieManager.getInstance().flush();
-    }
-
-    @Override
-    protected void onDestroy() {
-        destroyed = true;
-        handler.removeCallbacksAndMessages(null);
-        executor.shutdownNow();
-        super.onDestroy();
     }
 }

@@ -13,6 +13,7 @@ color text_main
 color text_muted
 drawable ic_error
 drawable ic_vpn_block
+drawable notification
 drawable shimmer_circle
 drawable shimmer_gradient
 drawable shimmer_layer_1

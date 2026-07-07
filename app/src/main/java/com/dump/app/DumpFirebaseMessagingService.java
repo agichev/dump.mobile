@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
+import android.webkit.CookieManager;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -14,6 +15,10 @@ import androidx.core.app.NotificationManagerCompat;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.Map;
 
 public class DumpFirebaseMessagingService extends FirebaseMessagingService {
@@ -21,10 +26,50 @@ public class DumpFirebaseMessagingService extends FirebaseMessagingService {
     private static final String CHANNEL_ID = "dump_notifications";
     private static final String PREF_NAME = "dump_fcm";
     private static final String KEY_TOKEN = "fcm_token";
+    private static volatile MainActivity activeActivity;
+
+    public static void setActiveActivity(MainActivity a) {
+        activeActivity = a;
+    }
 
     @Override
     public void onNewToken(String token) {
-        saveToken(token);
+        saveToken(this, token);
+        registerOnServerRetry(token);
+        MainActivity a = activeActivity;
+        if (a != null && a.webView != null) {
+            a.webView.post(() -> a.webView.evaluateJavascript(
+                "window.__fcmToken='" + token.replace("\\", "\\\\").replace("'", "\\'") + "';" +
+                "fcmRegistered=false;if(typeof fcmRetry==='function')fcmRetry();", null));
+        }
+    }
+
+    public static void registerOnServerRetry(String token) {
+        new Thread(() -> {
+            for (int i = 0; i < 300; i++) {
+                try {
+                    String cookies = CookieManager.getInstance().getCookie("https://dump.press");
+                    if (cookies == null || !cookies.contains("session")) {
+                        Thread.sleep(2000);
+                        continue;
+                    }
+                    URL url = new URL("https://dump.press/index.php?api=register_fcm_token_native");
+                    HttpURLConnection c = (HttpURLConnection) url.openConnection();
+                    c.setRequestMethod("POST");
+                    c.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                    c.setRequestProperty("Cookie", cookies);
+                    c.setDoOutput(true);
+                    c.setConnectTimeout(8000);
+                    c.setReadTimeout(8000);
+                    String body = "token=" + URLEncoder.encode(token, "UTF-8");
+                    try (OutputStream os = c.getOutputStream()) { os.write(body.getBytes()); }
+                    int code = c.getResponseCode();
+                    c.disconnect();
+                    if (code == 200) return;
+                } catch (Exception ignored) {}
+                try { Thread.sleep(2000); } catch (InterruptedException e) { return; }
+            }
+        }).start();
     }
 
     @Override
@@ -68,7 +113,7 @@ public class DumpFirebaseMessagingService extends FirebaseMessagingService {
         );
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(R.drawable.notification)
             .setContentTitle("Dump")
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -91,8 +136,8 @@ public class DumpFirebaseMessagingService extends FirebaseMessagingService {
         }
     }
 
-    private void saveToken(String token) {
-        getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+    public static void saveToken(Context ctx, String token) {
+        ctx.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
             .edit()
             .putString(KEY_TOKEN, token)
             .apply();
