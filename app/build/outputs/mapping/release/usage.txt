@@ -32598,6 +32598,8 @@ androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3:
 androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer
 androidx.viewpager2.adapter.FragmentStateAdapter
 androidx.viewpager2.adapter.FragmentViewHolder
+com.dump.app.MainActivity:
+    static void <clinit>()
 com.google.android.datatransport.AutoValue_Event:
     public final java.lang.Integer code
     public final com.google.android.datatransport.Priority priority

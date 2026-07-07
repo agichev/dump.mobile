@@ -74,6 +74,7 @@ public class DumpFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage message) {
+        if (MainActivity.isForeground) return;
         Map<String, String> data = message.getData();
         if (data.isEmpty()) return;
 
@@ -107,20 +108,22 @@ public class DumpFirebaseMessagingService extends FirebaseMessagingService {
         intent.putExtra("nav_post_id", postId != null ? postId : "");
         intent.putExtra("nav_post_slug", postSlug != null ? postSlug : "");
 
+        int requestCode = (int) (System.currentTimeMillis() & 0x7FFFFFFF);
         PendingIntent pendingIntent = PendingIntent.getActivity(
-            this, 0, intent,
+            this, requestCode, intent,
             PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.notification)
+            .setSmallIcon(R.drawable.ic_notification_small)
+            .setLargeIcon(android.graphics.BitmapFactory.decodeResource(getResources(), R.drawable.notification))
             .setContentTitle("Dump")
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setAutoCancel(true)
             .setContentIntent(pendingIntent);
 
-        NotificationManagerCompat.from(this).notify((int) System.currentTimeMillis(), builder.build());
+        NotificationManagerCompat.from(this).notify(requestCode, builder.build());
     }
 
     private void createNotificationChannel() {

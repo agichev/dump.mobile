@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isRu = false;
     private boolean destroyed = false;
     private ValueCallback<Uri[]> filePathCallback;
+    public static volatile boolean isForeground = false;
 
     private String pendingNavType;
     private String pendingNavFromUserId;
@@ -88,13 +89,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        isForeground = true;
         DumpFirebaseMessagingService.setActiveActivity(this);
         requestAndInjectToken();
+        handlePendingNav();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        isForeground = false;
         CookieManager.getInstance().flush();
     }
 
@@ -120,10 +124,13 @@ public class MainActivity extends AppCompatActivity {
         pendingNavFromUserId = intent.getStringExtra("nav_from_user_id");
         pendingNavPostId = intent.getStringExtra("nav_post_id");
         pendingNavPostSlug = intent.getStringExtra("nav_post_slug");
+        handlePendingNav();
+    }
 
-        if (pendingNavType != null && !pendingNavType.isEmpty() && pageLoaded && webView != null) {
-            navigateFromNotification();
-        }
+    private void handlePendingNav() {
+        if (pendingNavType == null || pendingNavType.isEmpty()) return;
+        if (!pageLoaded || webView == null) return;
+        webView.post(() -> navigateFromNotification());
     }
 
     private void navigateFromNotification() {
@@ -165,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
                 js = "navigate('/notifications');";
         }
         if (webView != null) {
-            webView.loadUrl("javascript:" + js);
+            webView.evaluateJavascript(js, null);
         }
         pendingNavType = null;
         pendingNavFromUserId = null;

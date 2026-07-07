@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:1:1-40:12
-INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:1:1-40:12
-INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:1:1-40:12
-INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:1:1-40:12
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:1:1-44:12
+INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:1:1-44:12
+INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:1:1-44:12
+INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:1:1-44:12
 MERGED from [com.google.android.material:material:1.12.0] /home/danil/.gradle/caches/8.11.1/transforms/e2bcb690a0edbbd33da106082e8fba17/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /home/danil/.gradle/caches/8.11.1/transforms/e3a0a5ca68b13b8fff300a198971f05e/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/danil/.gradle/caches/8.11.1/transforms/c1b59ad69c701edf3cb42cd89a1b1491/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
@@ -104,8 +104,8 @@ MERGED from [com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/
 	android:name
 		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:5:22-74
 application
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:7:5-39:19
-INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:7:5-39:19
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:7:5-43:19
+INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:7:5-43:19
 MERGED from [com.google.android.material:material:1.12.0] /home/danil/.gradle/caches/8.11.1/transforms/e2bcb690a0edbbd33da106082e8fba17/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /home/danil/.gradle/caches/8.11.1/transforms/e2bcb690a0edbbd33da106082e8fba17/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/danil/.gradle/caches/8.11.1/transforms/c1b59ad69c701edf3cb42cd89a1b1491/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -164,58 +164,64 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/danil/.gradle/caches/
 		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:12:9-40
 	android:usesCleartextTraffic
 		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:13:9-45
+meta-data#com.google.firebase.messaging.default_notification_icon
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:15:9-17:66
+	android:resource
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:17:13-63
+	android:name
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:16:13-83
 activity#com.dump.app.MainActivity
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:15:9-30:20
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:19:9-34:20
 	android:launchMode
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:18:13-43
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:22:13-43
 	android:windowSoftInputMode
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:19:13-55
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:23:13-55
 	android:exported
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:17:13-36
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:21:13-36
 	android:name
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:16:13-41
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:20:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:20:13-23:29
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:24:13-27:29
 action#android.intent.action.MAIN
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:21:17-69
-	android:name
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:21:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:22:17-77
-	android:name
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:22:27-74
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:dump.press+data:scheme:https
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:24:13-29:29
-action#android.intent.action.VIEW
 ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
 		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:26:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:dump.press+data:scheme:https
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:28:13-33:29
+action#android.intent.action.VIEW
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:29:25-66
 category#android.intent.category.DEFAULT
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:26:17-76
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:30:17-76
 	android:name
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:26:27-73
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:30:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:27:17-78
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:31:17-78
 	android:name
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:27:27-75
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:31:27-75
 data
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:28:17-74
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:32:17-74
 	android:host
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:28:46-71
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:32:46-71
 	android:scheme
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:28:23-45
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:32:23-45
 service#com.dump.app.DumpFirebaseMessagingService
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:32:9-38:19
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:36:9-42:19
 	android:exported
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:34:13-37
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:33:13-57
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:37:13-57
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:35:13-37:29
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:39:13-41:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:36:17-78
+ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:40:17-78
 	android:name
-		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:36:25-75
+		ADDED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:40:25-75
 uses-sdk
 INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml

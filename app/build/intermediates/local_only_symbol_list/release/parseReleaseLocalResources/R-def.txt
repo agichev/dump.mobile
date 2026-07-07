@@ -12,6 +12,7 @@ color surface_hover
 color text_main
 color text_muted
 drawable ic_error
+drawable ic_notification_small
 drawable ic_vpn_block
 drawable notification
 drawable shimmer_circle
