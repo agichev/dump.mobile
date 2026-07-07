@@ -1,155 +1,329 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.dump.app"
-4    android:versionCode="1"
-5    android:versionName="1.0" >
+4    android:versionCode="2"
+5    android:versionName="1.1" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:2:5-67
-11-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:2:22-64
+11-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:3:5-67
+11-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:3:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:3:5-79
-12-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:3:22-76
-13
-14    <permission
-14-->[androidx.core:core:1.13.0] /tmp/gradle-home/caches/8.11.1/transforms/d42ecbb30280f017e3b00664c7d5b8ff/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
-15        android:name="com.dump.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-15-->[androidx.core:core:1.13.0] /tmp/gradle-home/caches/8.11.1/transforms/d42ecbb30280f017e3b00664c7d5b8ff/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
-16        android:protectionLevel="signature" />
-16-->[androidx.core:core:1.13.0] /tmp/gradle-home/caches/8.11.1/transforms/d42ecbb30280f017e3b00664c7d5b8ff/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
-17
-18    <uses-permission android:name="com.dump.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-18-->[androidx.core:core:1.13.0] /tmp/gradle-home/caches/8.11.1/transforms/d42ecbb30280f017e3b00664c7d5b8ff/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
-18-->[androidx.core:core:1.13.0] /tmp/gradle-home/caches/8.11.1/transforms/d42ecbb30280f017e3b00664c7d5b8ff/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
-19
-20    <application
-20-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:5:5-29:19
-21        android:allowBackup="false"
-21-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:6:9-36
-22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.13.0] /tmp/gradle-home/caches/8.11.1/transforms/d42ecbb30280f017e3b00664c7d5b8ff/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
-23        android:extractNativeLibs="false"
-24        android:icon="@mipmap/ic_launcher"
-24-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:7:9-43
-25        android:label="@string/app_name"
-25-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:8:9-41
-26        android:supportsRtl="true"
-26-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:9:9-35
-27        android:theme="@style/AppTheme"
-27-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:10:9-40
-28        android:usesCleartextTraffic="false" >
-28-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:11:9-45
-29        <activity
-29-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:13:9-28:20
-30            android:name="com.dump.app.MainActivity"
-30-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:14:13-41
-31            android:exported="true"
-31-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:15:13-36
-32            android:launchMode="singleTop"
-32-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:16:13-43
-33            android:windowSoftInputMode="adjustResize" >
-33-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:17:13-55
-34            <intent-filter>
-34-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:18:13-21:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:19:17-69
-35-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:19:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:20:17-77
-37-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:20:27-74
-38            </intent-filter>
-39            <intent-filter>
-39-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:22:13-27:29
-40                <action android:name="android.intent.action.VIEW" />
-40-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:23:17-69
-40-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:23:25-66
-41
-42                <category android:name="android.intent.category.DEFAULT" />
-42-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:24:17-76
-42-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:24:27-73
-43                <category android:name="android.intent.category.BROWSABLE" />
-43-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:25:17-78
-43-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:25:27-75
+12-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:4:5-79
+12-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:4:22-76
+13    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+13-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:5:5-77
+13-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:5:22-74
+14    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+14-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:24:5-68
+14-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:24:22-65
+15    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+15-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:26:5-82
+15-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:26:22-79
+16
+17    <permission
+17-->[androidx.core:core:1.13.0] /home/danil/.gradle/caches/8.11.1/transforms/9537fbb4837bd4af3850dfb653bcddc8/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+18        android:name="com.dump.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.13.0] /home/danil/.gradle/caches/8.11.1/transforms/9537fbb4837bd4af3850dfb653bcddc8/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.13.0] /home/danil/.gradle/caches/8.11.1/transforms/9537fbb4837bd4af3850dfb653bcddc8/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="com.dump.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.13.0] /home/danil/.gradle/caches/8.11.1/transforms/9537fbb4837bd4af3850dfb653bcddc8/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.13.0] /home/danil/.gradle/caches/8.11.1/transforms/9537fbb4837bd4af3850dfb653bcddc8/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+22
+23    <application
+23-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:7:5-39:19
+24        android:allowBackup="false"
+24-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:8:9-36
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.13.0] /home/danil/.gradle/caches/8.11.1/transforms/9537fbb4837bd4af3850dfb653bcddc8/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+26        android:extractNativeLibs="false"
+27        android:icon="@mipmap/ic_launcher"
+27-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:9:9-43
+28        android:label="@string/app_name"
+28-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:10:9-41
+29        android:supportsRtl="true"
+29-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:11:9-35
+30        android:theme="@style/AppTheme"
+30-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:12:9-40
+31        android:usesCleartextTraffic="false" >
+31-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:13:9-45
+32        <activity
+32-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:15:9-30:20
+33            android:name="com.dump.app.MainActivity"
+33-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:16:13-41
+34            android:exported="true"
+34-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:17:13-36
+35            android:launchMode="singleTop"
+35-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:18:13-43
+36            android:windowSoftInputMode="adjustResize" >
+36-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:19:13-55
+37            <intent-filter>
+37-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:20:13-23:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:21:17-69
+38-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:21:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:22:17-77
+40-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:22:27-74
+41            </intent-filter>
+42            <intent-filter>
+42-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:24:13-29:29
+43                <action android:name="android.intent.action.VIEW" />
+43-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:25:17-69
+43-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:25:25-66
 44
-45                <data
-45-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:26:17-74
-46                    android:host="dump.press"
-46-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:26:46-71
-47                    android:scheme="https" />
-47-->/home/danil/Документы/GitHub/dumpmobile/app/src/main/AndroidManifest.xml:26:23-45
-48            </intent-filter>
-49        </activity>
-50
-51        <provider
-51-->[androidx.emoji2:emoji2:1.3.0] /tmp/gradle-home/caches/8.11.1/transforms/84ee0b22a7fcb3ab871e5f7405e328b1/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-52            android:name="androidx.startup.InitializationProvider"
-52-->[androidx.emoji2:emoji2:1.3.0] /tmp/gradle-home/caches/8.11.1/transforms/84ee0b22a7fcb3ab871e5f7405e328b1/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-53            android:authorities="com.dump.app.androidx-startup"
-53-->[androidx.emoji2:emoji2:1.3.0] /tmp/gradle-home/caches/8.11.1/transforms/84ee0b22a7fcb3ab871e5f7405e328b1/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-54            android:exported="false" >
-54-->[androidx.emoji2:emoji2:1.3.0] /tmp/gradle-home/caches/8.11.1/transforms/84ee0b22a7fcb3ab871e5f7405e328b1/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-55            <meta-data
-55-->[androidx.emoji2:emoji2:1.3.0] /tmp/gradle-home/caches/8.11.1/transforms/84ee0b22a7fcb3ab871e5f7405e328b1/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-56-->[androidx.emoji2:emoji2:1.3.0] /tmp/gradle-home/caches/8.11.1/transforms/84ee0b22a7fcb3ab871e5f7405e328b1/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-57                android:value="androidx.startup" />
-57-->[androidx.emoji2:emoji2:1.3.0] /tmp/gradle-home/caches/8.11.1/transforms/84ee0b22a7fcb3ab871e5f7405e328b1/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-58            <meta-data
-58-->[androidx.lifecycle:lifecycle-process:2.6.2] /tmp/gradle-home/caches/8.11.1/transforms/918f32f0176e3677b172546b64c04783/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-59-->[androidx.lifecycle:lifecycle-process:2.6.2] /tmp/gradle-home/caches/8.11.1/transforms/918f32f0176e3677b172546b64c04783/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-60                android:value="androidx.startup" />
-60-->[androidx.lifecycle:lifecycle-process:2.6.2] /tmp/gradle-home/caches/8.11.1/transforms/918f32f0176e3677b172546b64c04783/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-61            <meta-data
-61-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-62                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-62-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-63                android:value="androidx.startup" />
-63-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-64        </provider>
-65
-66        <receiver
-66-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-67            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-67-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-68            android:directBootAware="false"
-68-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-69            android:enabled="true"
-69-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-70            android:exported="true"
-70-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-71            android:permission="android.permission.DUMP" >
-71-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-72            <intent-filter>
-72-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-73                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-73-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-73-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-74            </intent-filter>
-75            <intent-filter>
-75-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-76                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-76-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-76-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-77            </intent-filter>
-78            <intent-filter>
-78-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-79                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-79-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-79-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-80            </intent-filter>
-81            <intent-filter>
-81-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-82                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-82-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-82-->[androidx.profileinstaller:profileinstaller:1.3.1] /tmp/gradle-home/caches/8.11.1/transforms/f3ef1f74219ccd3cc1aed198a8eb10dc/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-83            </intent-filter>
-84        </receiver>
-85    </application>
-86
-87</manifest>
+45                <category android:name="android.intent.category.DEFAULT" />
+45-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:26:17-76
+45-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:26:27-73
+46                <category android:name="android.intent.category.BROWSABLE" />
+46-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:27:17-78
+46-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:27:27-75
+47
+48                <data
+48-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:28:17-74
+49                    android:host="dump.press"
+49-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:28:46-71
+50                    android:scheme="https" />
+50-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:28:23-45
+51            </intent-filter>
+52        </activity>
+53
+54        <service
+54-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:32:9-38:19
+55            android:name="com.dump.app.DumpFirebaseMessagingService"
+55-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:33:13-57
+56            android:exported="false" >
+56-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:34:13-37
+57            <intent-filter>
+57-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:35:13-37:29
+58                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+58-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:36:17-78
+58-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:36:25-75
+59            </intent-filter>
+60        </service>
+61
+62        <receiver
+62-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:29:9-40:20
+63            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+63-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:30:13-78
+64            android:exported="true"
+64-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:31:13-36
+65            android:permission="com.google.android.c2dm.permission.SEND" >
+65-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:32:13-73
+66            <intent-filter>
+66-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:33:13-35:29
+67                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+67-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:34:17-81
+67-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:34:25-78
+68            </intent-filter>
+69
+70            <meta-data
+70-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:37:13-39:40
+71                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+71-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:38:17-92
+72                android:value="true" />
+72-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:39:17-37
+73        </receiver>
+74        <!--
+75             FirebaseMessagingService performs security checks at runtime,
+76             but set to not exported to explicitly avoid allowing another app to call it.
+77        -->
+78        <service
+78-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:46:9-53:19
+79            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+79-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:47:13-82
+80            android:directBootAware="true"
+80-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:48:13-43
+81            android:exported="false" >
+81-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:49:13-37
+82            <intent-filter android:priority="-500" >
+82-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:35:13-37:29
+83                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+83-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:36:17-78
+83-->/home/danil/Документы/GitHub/dump.mobile/app/src/main/AndroidManifest.xml:36:25-75
+84            </intent-filter>
+85        </service>
+86        <service
+86-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:54:9-63:19
+87            android:name="com.google.firebase.components.ComponentDiscoveryService"
+87-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:55:13-84
+88            android:directBootAware="true"
+88-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+89            android:exported="false" >
+89-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:56:13-37
+90            <meta-data
+90-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:57:13-59:85
+91                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+91-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:58:17-122
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:59:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:60:13-62:85
+94                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+94-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:61:17-119
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-messaging:24.0.0] /home/danil/.gradle/caches/8.11.1/transforms/6b4ea5216ec76214722b1a5a8c86edf5/transformed/firebase-messaging-24.0.0/AndroidManifest.xml:62:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-datatransport:18.2.0] /home/danil/.gradle/caches/8.11.1/transforms/d6e0908265d03d1cfc57e2f9b8f3d7d7/transformed/firebase-datatransport-18.2.0/AndroidManifest.xml:25:13-27:85
+97                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+97-->[com.google.firebase:firebase-datatransport:18.2.0] /home/danil/.gradle/caches/8.11.1/transforms/d6e0908265d03d1cfc57e2f9b8f3d7d7/transformed/firebase-datatransport-18.2.0/AndroidManifest.xml:26:17-115
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-datatransport:18.2.0] /home/danil/.gradle/caches/8.11.1/transforms/d6e0908265d03d1cfc57e2f9b8f3d7d7/transformed/firebase-datatransport-18.2.0/AndroidManifest.xml:27:17-82
+99            <meta-data
+99-->[com.google.firebase:firebase-installations:18.0.0] /home/danil/.gradle/caches/8.11.1/transforms/14f15fca299463bcf1fe8352b7c22a3e/transformed/firebase-installations-18.0.0/AndroidManifest.xml:15:13-17:85
+100                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+100-->[com.google.firebase:firebase-installations:18.0.0] /home/danil/.gradle/caches/8.11.1/transforms/14f15fca299463bcf1fe8352b7c22a3e/transformed/firebase-installations-18.0.0/AndroidManifest.xml:16:17-130
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-installations:18.0.0] /home/danil/.gradle/caches/8.11.1/transforms/14f15fca299463bcf1fe8352b7c22a3e/transformed/firebase-installations-18.0.0/AndroidManifest.xml:17:17-82
+102            <meta-data
+102-->[com.google.firebase:firebase-installations:18.0.0] /home/danil/.gradle/caches/8.11.1/transforms/14f15fca299463bcf1fe8352b7c22a3e/transformed/firebase-installations-18.0.0/AndroidManifest.xml:18:13-20:85
+103                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+103-->[com.google.firebase:firebase-installations:18.0.0] /home/danil/.gradle/caches/8.11.1/transforms/14f15fca299463bcf1fe8352b7c22a3e/transformed/firebase-installations-18.0.0/AndroidManifest.xml:19:17-127
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.firebase:firebase-installations:18.0.0] /home/danil/.gradle/caches/8.11.1/transforms/14f15fca299463bcf1fe8352b7c22a3e/transformed/firebase-installations-18.0.0/AndroidManifest.xml:20:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/b5788935d11c8016049a96fdbae7dd4b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+106                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+106-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/b5788935d11c8016049a96fdbae7dd4b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/b5788935d11c8016049a96fdbae7dd4b/transformed/firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+109                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+109-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+111        </service>
+112        <service
+112-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/e4988b63fbc87252aee389c3993a4af9/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+113            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+113-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/e4988b63fbc87252aee389c3993a4af9/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+114            android:exported="false" >
+114-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/e4988b63fbc87252aee389c3993a4af9/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+115            <meta-data
+115-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/e4988b63fbc87252aee389c3993a4af9/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+116                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+116-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/e4988b63fbc87252aee389c3993a4af9/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+117                android:value="cct" />
+117-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/e4988b63fbc87252aee389c3993a4af9/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+118        </service>
+119        <service
+119-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/52592d2ac0818e5d2aba7c747cbfb1cc/transformed/transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+120            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+120-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/52592d2ac0818e5d2aba7c747cbfb1cc/transformed/transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+121            android:exported="false"
+121-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/52592d2ac0818e5d2aba7c747cbfb1cc/transformed/transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+122            android:permission="android.permission.BIND_JOB_SERVICE" >
+122-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/52592d2ac0818e5d2aba7c747cbfb1cc/transformed/transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+123        </service>
+124
+125        <receiver
+125-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/52592d2ac0818e5d2aba7c747cbfb1cc/transformed/transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+126            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+126-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/52592d2ac0818e5d2aba7c747cbfb1cc/transformed/transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
+127            android:exported="false" />
+127-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/danil/.gradle/caches/8.11.1/transforms/52592d2ac0818e5d2aba7c747cbfb1cc/transformed/transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+128
+129        <provider
+129-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+130            android:name="com.google.firebase.provider.FirebaseInitProvider"
+130-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+131            android:authorities="com.dump.app.firebaseinitprovider"
+131-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+132            android:directBootAware="true"
+132-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+133            android:exported="false"
+133-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+134            android:initOrder="100" />
+134-->[com.google.firebase:firebase-common:21.0.0] /home/danil/.gradle/caches/8.11.1/transforms/e0e8fc060e616edc1214c307f1ebdce3/transformed/firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+135
+136        <activity
+136-->[com.google.android.gms:play-services-base:18.0.1] /home/danil/.gradle/caches/8.11.1/transforms/af2f61d120eef1f086a298b83fd34f9d/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+137            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+137-->[com.google.android.gms:play-services-base:18.0.1] /home/danil/.gradle/caches/8.11.1/transforms/af2f61d120eef1f086a298b83fd34f9d/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+138            android:exported="false"
+138-->[com.google.android.gms:play-services-base:18.0.1] /home/danil/.gradle/caches/8.11.1/transforms/af2f61d120eef1f086a298b83fd34f9d/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+139            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+139-->[com.google.android.gms:play-services-base:18.0.1] /home/danil/.gradle/caches/8.11.1/transforms/af2f61d120eef1f086a298b83fd34f9d/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+140
+141        <provider
+141-->[androidx.emoji2:emoji2:1.3.0] /home/danil/.gradle/caches/8.11.1/transforms/386aae14525425810f584180d7d08ce9/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+142            android:name="androidx.startup.InitializationProvider"
+142-->[androidx.emoji2:emoji2:1.3.0] /home/danil/.gradle/caches/8.11.1/transforms/386aae14525425810f584180d7d08ce9/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+143            android:authorities="com.dump.app.androidx-startup"
+143-->[androidx.emoji2:emoji2:1.3.0] /home/danil/.gradle/caches/8.11.1/transforms/386aae14525425810f584180d7d08ce9/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+144            android:exported="false" >
+144-->[androidx.emoji2:emoji2:1.3.0] /home/danil/.gradle/caches/8.11.1/transforms/386aae14525425810f584180d7d08ce9/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+145            <meta-data
+145-->[androidx.emoji2:emoji2:1.3.0] /home/danil/.gradle/caches/8.11.1/transforms/386aae14525425810f584180d7d08ce9/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+146                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+146-->[androidx.emoji2:emoji2:1.3.0] /home/danil/.gradle/caches/8.11.1/transforms/386aae14525425810f584180d7d08ce9/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+147                android:value="androidx.startup" />
+147-->[androidx.emoji2:emoji2:1.3.0] /home/danil/.gradle/caches/8.11.1/transforms/386aae14525425810f584180d7d08ce9/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+148            <meta-data
+148-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/danil/.gradle/caches/8.11.1/transforms/07df8cc4ab7785a004f04a1e02df0b16/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+149                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+149-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/danil/.gradle/caches/8.11.1/transforms/07df8cc4ab7785a004f04a1e02df0b16/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+150                android:value="androidx.startup" />
+150-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/danil/.gradle/caches/8.11.1/transforms/07df8cc4ab7785a004f04a1e02df0b16/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+151            <meta-data
+151-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+152                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+153                android:value="androidx.startup" />
+153-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+154        </provider>
+155
+156        <meta-data
+156-->[com.google.android.gms:play-services-basement:18.3.0] /home/danil/.gradle/caches/8.11.1/transforms/83ec3db1be21aeffedb29653d79518f0/transformed/play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
+157            android:name="com.google.android.gms.version"
+157-->[com.google.android.gms:play-services-basement:18.3.0] /home/danil/.gradle/caches/8.11.1/transforms/83ec3db1be21aeffedb29653d79518f0/transformed/play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
+158            android:value="@integer/google_play_services_version" />
+158-->[com.google.android.gms:play-services-basement:18.3.0] /home/danil/.gradle/caches/8.11.1/transforms/83ec3db1be21aeffedb29653d79518f0/transformed/play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
+159
+160        <receiver
+160-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+161            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+161-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+162            android:directBootAware="false"
+162-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+163            android:enabled="true"
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+164            android:exported="true"
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+165            android:permission="android.permission.DUMP" >
+165-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+166            <intent-filter>
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+167                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+168            </intent-filter>
+169            <intent-filter>
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+170                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+170-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+170-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+171            </intent-filter>
+172            <intent-filter>
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+173                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+173-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+173-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+174            </intent-filter>
+175            <intent-filter>
+175-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+176                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+176-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+176-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/danil/.gradle/caches/8.11.1/transforms/ad88045c6a1ef8a2feca6492c27574ee/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+177            </intent-filter>
+178        </receiver>
+179    </application>
+180
+181</manifest>

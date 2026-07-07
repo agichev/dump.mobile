@@ -26,7 +26,7 @@
       type="MAIN"
       applicationId="com.dump.app"
       generatedSourceFolders="build/generated/ap_generated_sources/release/out"
-      generatedResourceFolders="build/generated/res/resValues/release"
-      desugaredMethodsFiles="/home/danil/.gradle/caches/8.11.1/transforms/c2080af78ce81ca198f0d1a0085f2f97/transformed/D8BackportedDesugaredMethods.txt">
+      generatedResourceFolders="build/generated/res/processReleaseGoogleServices:build/generated/res/resValues/release"
+      desugaredMethodsFiles="/home/danil/.gradle/caches/8.11.1/transforms/099afc6182305eaa19aa7e3246a3e04e/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>

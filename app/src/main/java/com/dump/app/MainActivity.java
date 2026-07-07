@@ -1,5 +1,6 @@
 package com.dump.app;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,6 +14,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.webkit.CookieManager;
+import android.webkit.JavascriptInterface;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -23,6 +25,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -46,10 +50,22 @@ public class MainActivity extends AppCompatActivity {
     private boolean destroyed = false;
     private ValueCallback<Uri[]> filePathCallback;
 
+    private String pendingNavType;
+    private String pendingNavFromUserId;
+    private String pendingNavPostId;
+    private String pendingNavPostSlug;
+
     private static final String DUMP_URL = "https://dump.press";
     private static final String GEO_API = "https://get.geojs.io/v1/ip/country";
     private static final int MAX_RETRIES = 2;
     private int retryCount = 0;
+
+    public class AndroidBridge {
+        @JavascriptInterface
+        public String getFcmToken() {
+            return DumpFirebaseMessagingService.getSavedToken(MainActivity.this);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +83,83 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.errorRetryBtn).setOnClickListener(v -> restart());
 
         setupWebView();
+        handleIntent(getIntent());
+        requestNotifPermission();
         startSkeleton();
         checkIp();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        handleIntent(intent);
+    }
+
+    private void handleIntent(Intent intent) {
+        if (intent == null) return;
+        pendingNavType = intent.getStringExtra("nav_type");
+        pendingNavFromUserId = intent.getStringExtra("nav_from_user_id");
+        pendingNavPostId = intent.getStringExtra("nav_post_id");
+        pendingNavPostSlug = intent.getStringExtra("nav_post_slug");
+
+        if (pendingNavType != null && !pendingNavType.isEmpty() && pageLoaded && webView != null) {
+            navigateFromNotification();
+        }
+    }
+
+    private void navigateFromNotification() {
+        if (pendingNavType == null || pendingNavType.isEmpty()) return;
+        String js;
+        switch (pendingNavType) {
+            case "comment":
+                if (pendingNavPostSlug != null && !pendingNavPostSlug.isEmpty()) {
+                    js = "navigate('/post/" + jsEscape(pendingNavPostSlug) + "');";
+                } else {
+                    js = null;
+                }
+                break;
+            case "like":
+            case "follow":
+                if (pendingNavFromUserId != null && !pendingNavFromUserId.isEmpty()) {
+                    js = "navigate('/profile/" + jsEscape(pendingNavFromUserId) + "');";
+                } else {
+                    js = null;
+                }
+                break;
+            case "new_post":
+                if (pendingNavPostSlug != null && !pendingNavPostSlug.isEmpty()) {
+                    js = "navigate('/post/" + jsEscape(pendingNavPostSlug) + "');";
+                } else if (pendingNavFromUserId != null && !pendingNavFromUserId.isEmpty()) {
+                    js = "navigate('/profile/" + jsEscape(pendingNavFromUserId) + "');";
+                } else {
+                    js = null;
+                }
+                break;
+            case "login":
+                js = "navigate('/profile');setTimeout(function(){openSettings();setTimeout(function(){switchSettingsTab('sessions')},100)},300);";
+                break;
+            default:
+                js = null;
+        }
+        if (js != null) {
+            webView.evaluateJavascript(js, null);
+        }
+        pendingNavType = null;
+    }
+
+    private String jsEscape(String s) {
+        return s.replace("\\", "\\\\").replace("'", "\\'").replace("\"", "\\\"");
+    }
+
+    private void requestNotifPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1002);
+            }
+        }
     }
 
     private void restart() {
@@ -139,6 +230,8 @@ public class MainActivity extends AppCompatActivity {
         s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         s.setUserAgentString(WebSettings.getDefaultUserAgent(this) + " DumpApp/1.0");
 
+        webView.addJavascriptInterface(new AndroidBridge(), "AndroidBridge");
+
         CookieManager cm = CookieManager.getInstance();
         cm.setAcceptCookie(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -171,6 +264,9 @@ public class MainActivity extends AppCompatActivity {
                     "(function(){var m=document.querySelector('meta[name=viewport]');if(m){var c=m.content;if(c.indexOf('width=390')>=0){m.content=c.replace('width=390','width=device-width')}}if(typeof CSS!=='undefined'&&CSS.supports&&!CSS.supports('height','1dvh')){var s=document.createElement('style');s.textContent='body,.feed-container,.post-card{height:100vh!important}.post-wrapper{height:82vh!important}.profile-container{height:100vh!important}.modal-overlay{height:100vh!important}.modal-content{max-height:90vh!important}';document.head.appendChild(s)}document.body.style.overflow='hidden';requestAnimationFrame(function(){document.body.style.overflow='';window.dispatchEvent(new Event('resize'))})})();",
                     null
                 );
+                if (pendingNavType != null && !pendingNavType.isEmpty()) {
+                    navigateFromNotification();
+                }
             }
 
             @Override

@@ -12,6 +12,12 @@
     <color name="text_main">#ffffff</color>
     <color name="text_muted">#808080</color>
     <string name="app_name">Dump</string>
+    <string name="gcm_defaultSenderId" translatable="false">257979031294</string>
+    <string name="google_api_key" translatable="false">AIzaSyD6A1ZxPo8YjQgApNHV_Qa94M8I_SKC2P0</string>
+    <string name="google_app_id" translatable="false">1:257979031294:android:7d2ab9457bb7818f58cfaf</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD6A1ZxPo8YjQgApNHV_Qa94M8I_SKC2P0</string>
+    <string name="google_storage_bucket" translatable="false">dumpdotpress.firebasestorage.app</string>
+    <string name="project_id" translatable="false">dumpdotpress</string>
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@color/bg</item>
         <item name="colorPrimary">@color/surface</item>

@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="/home/danil/Документы/GitHub/dumpmobile/app"
+    dir="/home/danil/Документы/GitHub/dump.mobile/app"
     name=":app"
     type="APP"
     maven="Dump:app:unspecified"
