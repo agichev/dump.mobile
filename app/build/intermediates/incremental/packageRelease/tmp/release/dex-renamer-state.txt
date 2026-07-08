@@ -1,4 +1,4 @@
-#Tue Jul 07 20:18:59 KRAT 2026
+#Wed Jul 08 23:42:29 KRAT 2026
 base.0=/home/danil/Документы/GitHub/dump.mobile/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-path.0=classes.dex
 renamed.0=classes.dex
+path.0=classes.dex

@@ -195,12 +195,14 @@
 
 # End of content from /home/danil/Документы/GitHub/dump.mobile/app/build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.7.2
 # The proguard configuration file for the following section is /home/danil/Документы/GitHub/dump.mobile/app/proguard-rules.pro
-# Add project specific ProGuard rules here.
 -keepclassmembers class * {
     @android.webkit.JavascriptInterface <methods>;
 }
--keepattributes *Annotation*
+-keepattributes *Annotation*, JavascriptInterface
 -keep class com.dump.app.** { *; }
+-keep class * extends android.webkit.WebView { *; }
+-dontwarn com.dump.app.**
+
 # End of content from /home/danil/Документы/GitHub/dump.mobile/app/proguard-rules.pro
 # The proguard configuration file for the following section is /home/danil/.gradle/caches/8.11.1/transforms/e2bcb690a0edbbd33da106082e8fba17/transformed/material-1.12.0/proguard.txt
 # Copyright (C) 2015 The Android Open Source Project

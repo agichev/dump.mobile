@@ -23,11 +23,7 @@ id errorMsg
 id errorRetryBtn
 id errorScreen
 id loadingLogo
-id retryBtn
 id skeletonOverlay
-id vpnBlock
-id vpnDesc
-id vpnIcon
 id webView
 layout activity_main
 mipmap ic_launcher

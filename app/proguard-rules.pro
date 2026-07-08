@@ -1,6 +1,7 @@
-# Add project specific ProGuard rules here.
 -keepclassmembers class * {
     @android.webkit.JavascriptInterface <methods>;
 }
--keepattributes *Annotation*
+-keepattributes *Annotation*, JavascriptInterface
 -keep class com.dump.app.** { *; }
+-keep class * extends android.webkit.WebView { *; }
+-dontwarn com.dump.app.**
